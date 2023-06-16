@@ -1,0 +1,24 @@
+.navbar-nav{
+    border: 1px solid rgb(235, 232, 232, .9);
+    border-radius: 10px;
+  }
+  .navbar{
+    border-bottom: 1px solid rgb(235, 232, 232, .9);
+  }
+  .nav-link:hover{
+    background-color: #f1f1f1;
+    animation: mover 0.5s infinite;
+    border: 1px solid #f1f1f1;
+  }
+  @keyframes mover {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(1.2deg);
+      color: #0a0a0a;
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
