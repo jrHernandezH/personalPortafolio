@@ -1,24 +1,70 @@
-.navbar-nav{
-    border: 1px solid rgb(235, 232, 232, .9);
-    border-radius: 10px;
-  }
-  .navbar{
-    border-bottom: 1px solid rgb(235, 232, 232, .9);
-  }
-  .nav-link:hover{
-    background-color: #f1f1f1;
-    animation: mover 0.5s infinite;
-    border: 1px solid #f1f1f1;
-  }
-  @keyframes mover {
-    0% {
-      transform: rotate(0);
-    }
-    50% {
-      transform: rotate(1.2deg);
-      color: #0a0a0a;
-    }
-    100% {
-      transform: rotate(0);
-    }
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.nav{
+  position: fixed;
+  background-color: #1E1E1E;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  top: 0;
+  width: 100%; 
+  max-width: 1420px;
+  height: 67px;
+  border-bottom: 1px solid #010101;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.logo{
+  width: 279px;
+  height: 67px;
+  display: flex;
+  align-items: center;
+  color: #FBFBFB;
+  font-family: 'Montserrat';
+  font-size: 24px;
+}
+.img{
+  width: 26px;
+  object-fit: cover;
+}
+.logo> span::first-letter{
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.menu{
+  width: 807px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+.caja{
+  width: max-content;
+  height: 52px;
+  display: grid;
+  align-items: center;
+}
+.caja> a{
+  font-size: 18px;
+  font-family: 'Poppins';
+  text-decoration: none;
+  color: #ffffff;
+}
+.cv{
+  display: grid;
+  place-content: center;
+}
+.cv>button{
+  width: 138px;
+  height: 42px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FD6F00;
+  color: #FBFBFB;
+  font-size: 16px;
+  font-family: 'Poppins';
+  letter-spacing: 3%;
+}
