@@ -4,10 +4,9 @@
 .nav{
   position: fixed;
   background-color: #1E1E1E;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   top: 0;
+  left: 0;
   width: 100%; 
-  max-width: 1420px;
   height: 67px;
   border-bottom: 1px solid #010101;
 }
@@ -17,7 +16,7 @@
   justify-content: space-evenly;
 }
 .logo{
-  width: 279px;
+  width: fit-content;
   height: 67px;
   display: flex;
   align-items: center;
@@ -40,6 +39,9 @@
   display: flex;
   align-items: center;
   gap: 21px;
+}
+.burguer{
+  display: none;
 }
 .caja{
   width: max-content;
@@ -67,4 +69,35 @@
   font-size: 16px;
   font-family: 'Poppins';
   letter-spacing: 3%;
+}
+@media (max-width: 576px) {
+  .nav {
+    width: 100px;
+  }
+  .container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .burguer{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    gap: 5px;
+  }
+  .burguer-line{
+    width: 23px;
+    height: 1px;
+    background-color: #fff;
+  }
+  .menu{
+    width: 0px;
+    display: none;
+  }
+  .logo{
+    width: fit-content;
+  }
+  .logo>img{
+    display: none;
+  }
 }

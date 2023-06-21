@@ -10,7 +10,7 @@
     align-items: center;
 }
 .perfil{
-    width: 778px;
+    width: 100%;
     height: 495px;
 }
 .saludo{
@@ -83,12 +83,64 @@
 }
 .rectangulo{
     position: relative;
-    width: 374px;
+    width: 100%;
     height: 83px;
     left: 0px;
     top: 150px;
     background: rgba(253, 111, 0, 0.6);
 }
-main{
-    height: 100vh;
+.foto> img{
+    margin-top: -90px;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+}
+@media only screen and (max-width: 767px) {
+    .header{
+        width: 100%;
+        height: fit-content;
+        padding-top: 100px;
+    }
+    .contenedor{
+        flex-direction: column-reverse;
+        width: 100%;
+        height: max-content;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .perfil{
+        width: 100%;
+        height: fit-content;
+    }
+    .deveF{
+        height: fit-content;
+        font-size: 44px;
+        height: fit-content;
+    }
+    .second{
+        margin-left: 35%;
+        margin-bottom: 50px;
+    }
+    .parrafo{
+        width: 96%;
+        height: fit-content;
+        font-size: .9em;
+        line-height:normal;
+        margin: 10px auto;
+    }
+    .foto{
+        margin: 0px;
+        margin-top: -50px;
+        width: 100%;
+        height: max-content;
+        z-index: -100;
+    }
+    .foto>img{
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+    }
+    .rectangulo{
+        height: 60px;
+    }
 }
