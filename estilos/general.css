@@ -2,10 +2,19 @@
 @import url(./cabecera.css);
 @import url(./about.css);
 @import url(./services.css);
-body{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #1E1E1E;
-}
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #1E1E1E;
+        user-select: none;
+        -ms-overflow-style: none; /* Para navegadores basados en Edge */
+    scrollbar-width: none; /* Para navegadores basados en WebKit */
+    overflow-y: scroll;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }

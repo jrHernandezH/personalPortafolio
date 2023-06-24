@@ -1,146 +1,250 @@
-.header{
-    width: 100%;
-    height: 517.24px;
-    padding-top: 100px;
-}
-.contenedor{
-    width: 100%;
+#header{
+    width: 90%;
+    height: max-content;
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: start;
+    padding-top: 30px;
+    margin: 50px auto;
+    gap: 50px;
 }
 .perfil{
-    width: 100%;
-    height: 495px;
-}
-.saludo{
-    width: 89px;
-    height: 26px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-}
-.name{
-    width: 283px;
-    height: 38px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 38px;
-    letter-spacing: 0.03em;
-    color: #FD6F00;
-}
-.deveF{
-    width: 488px;
-    height: 30px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 100px;
-    line-height: 0;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-    margin:  55px 10px;
-}
-.second{
-    margin: 20px;
-    margin-left: 50%;
-}
-.parrafo{
-    width: 698px;
-    height: 101px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 32px;
-    text-align: justify;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
-}
-.hireMe{
-    width: fit-content;
-    height: 52px;
-    background: #FD6F00;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 32px;
-    text-align: justify;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
+    width: 50%;
+    height: 550px;
 }
 .foto{
-    z-index: -100;
-}
-.rectangulo{
-    position: relative;
     width: 100%;
-    height: 83px;
-    left: 0px;
-    top: 150px;
-    background: rgba(253, 111, 0, 0.6);
-}
-.foto> img{
-    margin-top: -90px;
-    width: 400px;
-    height: 500px;
+    height: 100%;
     object-fit: cover;
 }
-@media only screen and (max-width: 767px) {
-    .header{
-        width: 100%;
-        height: fit-content;
-        padding-top: 100px;
-    }
-    .contenedor{
-        flex-direction: column-reverse;
-        width: 100%;
-        height: max-content;
-        flex-wrap: wrap;
-        gap: 10px;
+.Home{
+    width: 40%;
+    height: 435px;
+    margin: 0 auto;
+}
+.Home >span{
+    color: #FFF;
+    font-size: 24px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    letter-spacing: 0.72px;
+}
+.Home>h1{
+    color: #FD6F00;
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    letter-spacing: 0.96px;
+}
+.profesion{
+    width: 80%;
+    height: 130px;
+    margin: 0 auto;
+}
+.profesion p{
+    display: inline-block;
+    margin: 0;
+    font-size: 46px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #FFF;
+    position: relative;
+}
+.profesion p:last-child {
+    width: fit-content;
+    float: right;
+}
+.Home >p{
+    margin: 15px 5px;
+    padding: 10px;
+    color: #FFF;
+    text-align: justify;
+    font-size: 19px;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    word-spacing: 0.1;
+}
+.profesion p .barrido {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 50px;
+    background-color: #FD6F00;
+    transition: width 0.3s ease;
+}
+.profesion p:hover{
+    color: #222;
+}
+.profesion p:hover .barrido {
+    width: 100%;
+    z-index: -1;
+}
+.hireMe{
+    width: 100%;
+    height: 60px;
+    background-color: #FD6F00;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #c42f0a;
+  }
+/*Celular*/
+@media (max-width: 767px) {
+    #header{
+        flex-direction: column;
+        margin: 10px auto;
     }
     .perfil{
         width: 100%;
-        height: fit-content;
+        height: 325px;
     }
-    .deveF{
-        height: fit-content;
-        font-size: 44px;
-        height: fit-content;
-    }
-    .second{
-        margin-left: 35%;
-        margin-bottom: 50px;
-    }
-    .parrafo{
-        width: 96%;
-        height: fit-content;
-        font-size: .9em;
-        line-height:normal;
-        margin: 10px auto;
-    }
-    .foto{
-        margin: 0px;
-        margin-top: -50px;
+    .Home{
         width: 100%;
+        height: fit-content;
+    }
+    .Home >span{
+        color: #FFF;
+        font-size: 24px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        letter-spacing: 0.72px;
+    }
+    .Home>h1{
+        color: #FD6F00;
+        font-size: 32px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        letter-spacing: 0.96px;
+    }
+    .profesion{
+        width: 100%;
+        height: 130px;
+    }
+    .profesion p{
+        display: inline-block;
+        margin: 0;
+        font-size: 46px;
+        font-family: 'Poppins';
+        font-weight: 700;
+        color: #FFF;
+        position: relative;
+    }
+    .profesion p:last-child {
+        width: fit-content;
+        float: right;
+    }
+    .Home >p{
+        margin: 15px 5px;
+        padding: 10px;
+        color: #FFF;
+        text-align: justify;
+        font-size: 19px;
+        font-family: 'Poppins';
+        letter-spacing: 1px;
+        word-spacing: 0.1;
+    }
+    .profesion p .barrido {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 0;
+        height: 50px;
+        background-color: #FD6F00;
+        transition: width 0.3s ease;
+    }
+    .profesion p:hover{
+        color: #222;
+    }
+    .profesion p:hover .barrido {
+        width: 100%;
+        z-index: -1;
+    }
+    .hireMe{
+        width: 100%;
+    }
+}
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #header{
+        width: 90%;
         height: max-content;
-        z-index: -100;
+        align-items: flex-start;
     }
-    .foto>img{
+    .perfil{
+        width: 50%;
+        height: 550px;
+    }
+    .Home{
+        width: 50%;
+        height: 550px;
+    }
+    .Home>span{
+        font-size: 22px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        letter-spacing: 0.72px;
+        color: #FFF;
+    }
+    .Home>h1{
+        color: #FD6F00;
+        font-size: 24px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        letter-spacing: 0.96px;
+    }
+    .profesion{
         width: 100%;
-        height: 300px;
-        margin: 0 auto;
+        height: 130px;
     }
-    .rectangulo{
-        height: 60px;
+    .profesion p{
+        display: inline-block;
+        margin: 0;
+        font-size: 46px;
+        font-family: 'Poppins';
+        font-weight: 700;
+        color: #FFF;
+        position: relative;
+    }
+    .profesion p:last-child {
+        width: fit-content;
+        float: right;
+    }
+    .Home >p{
+        margin: 15px 5px;
+        padding: 10px;
+        color: #FFF;
+        text-align: justify;
+        font-size: 19px;
+        font-family: 'Poppins';
+        letter-spacing: 1px;
+        word-spacing: 0.1;
+    }
+    .profesion p .barrido {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 0;
+        height: 50px;
+        background-color: #FD6F00;
+        transition: width 0.3s ease;
+    }
+    .profesion p:hover{
+        color: #222;
+    }
+    .profesion p:hover .barrido {
+        width: 100%;
+        z-index: -1;
+    }
+    .hireMe{
+        width: 100%;
     }
 }
