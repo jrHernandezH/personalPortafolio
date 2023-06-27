@@ -1,5 +1,5 @@
-const burgerIcon = document.querySelector('.burger-icon');
-const menu = document.querySelector('.menu');
+const burgerIcon = document.querySelector('.hamburger');
+const menu = document.querySelector('.hamburger');
 
 const menuBurger = () => {
     menu.classList.toggle('show-menu');
