@@ -146,11 +146,11 @@
 }
 @media (max-width: 768px) {
     #formContainer {
-        width: 200px;
+        width: 250px;
         left:-20px;
     }
     .container {
-        width: 250px;
+        width: 300px;
         left: 0px;
     }
     #formContainer.open {
@@ -160,10 +160,10 @@
         width: 100%;
     }
     #closeFormButton {
-        cursor: pointer;
-        margin-bottom: 10px;
-        position: relative;
-        left: 150px;
-        color: #e8e8e8;
-      }
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    left: 150px;
+    color: #e8e8e8;
+  }
 }
