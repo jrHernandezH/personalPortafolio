@@ -1,7 +1,14 @@
 @import url(./navegacion.css);
 @import url(./cabecera.css);
 @import url(./about.css);
-@import url(./services.css);
+@import url(./projects.css);
+@import url(./footer.css);
+@import url(./formulario.css);
+    * {
+        -webkit-tap-highlight-color: transparent;
+        outline: none; 
+        box-sizing: border-box;
+    }
     html {
         scroll-behavior: smooth;
     }
@@ -14,6 +21,7 @@
         -ms-overflow-style: none; 
         scrollbar-width: none;
         overflow-y: scroll;
+        outline: none;
     }
     ::-webkit-scrollbar {
         display: none;

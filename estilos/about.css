@@ -1,7 +1,8 @@
 #About{
     width: 90%;
     height: max-content;
-    margin: 0 auto;
+    margin: 10px auto;
+    padding: 100px 0;
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
@@ -85,21 +86,40 @@
 
 .skill-percent-number {
   margin-left: 20px;
-  font-size: 16px;
+  font-size: 1.2em;
   color: #3c3c3c;
   font-weight: bold;
 }
 /*Celular*/
 @media (max-width: 767px) {
     #About{
-        height: 190vh;
+        height: auto;
         flex-direction: column;
         gap: 10px;
     }
     .pareja{
         width: 100%;
-    }
-    .presentacion{
+        height: 369px;
+      }
+      .presentacion{
         width: 100%;
+      }
+      .foto{
+      object-position: center;
+      border-radius: 10px;
     }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #About{
+    width: 90%;
+    height: auto;
+    align-items: center;
+  }
+  .pareja{
+    width: 40%;
+    height: 100%;
+  }
+  .foto{
+    border-radius: 10px;
+  }
 }

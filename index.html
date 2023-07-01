@@ -2,16 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta property="og:title" content="Hugo Hernandez" />
+    <meta
+      property="og:description"
+      content="Portafolio personal para contactar"
+    />
+    <meta
+      property="og:image"
+      content="./source/img/compartir.png"
+    />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
     <title>Mi portafolio personal </title>
     <link rel="stylesheet" href="./estilos/general.css" />
-    <link
-      href="https://unpkg.com/css.gg@2.0.0/icons/css/close-o.css"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <nav id="nav">
@@ -31,12 +36,67 @@
       <ul class="menu">
         <li><a href="#header">Home</a></li>
         <li><a href="#About">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <button class="btn contact">Contact me</button>
-        <button class="btn Cv">Download CV</button>
+        <li><a href="#projects">Projects</a></li>
+        <button>
+          <span id="contact">Contact me</span>
+        </button>
+        <button>
+          <span id="Cv">Download CV</span>
+        </button>
       </ul>
     </nav>
     <header id="header">
+      <div id="overlay">
+        <div id="formContainer">
+          <svg
+            id="closeFormButton"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+              fill="currentColor"
+            />
+          </svg>
+          <div class="container">
+            <form class="form">
+              <div class="descr">Contact us</div>
+              <div class="input">
+                <input
+                  required=""
+                  autocomplete="off"
+                  type="text"
+                />
+                <label for="name">Name</label>
+              </div>
+
+              <div class="input">
+                <input
+                  required
+                  autocomplete="off"
+                  name="email"
+                  type="email"
+                />
+                <label for="email">E-mail</label>
+              </div>
+
+              <div class="input">
+                <textarea
+                  required=""
+                  cols="30"
+                  rows="1"
+                  id="message"
+                ></textarea>
+                <label for="message">Message</label>
+              </div>
+              <button>Send message →</button>
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="perfil">
         <img
           src="./source/img/newFormal.webp"
@@ -57,90 +117,256 @@
           solutions. Although I have basic knowledge in
           HTML, CSS and JavaScript</p
         >
-        <button class="btn hireMe">HIre me</button>
+        <button role="button" class="button-name"
+          >Hire me</button
+        >
       </div>
     </header>
-    <main id="About">
-      <div class="pareja">
-        <img
-          src="./source/img/marrime.jpg"
-          alt="mi pareja y yo"
-          class="foto"
-        />
-      </div>
-      <div class="presentacion">
-        <h2>About Me</h2>
-        <p
-          >I am committed to continuous learning and
-          exploration of new technologies. Through my
-          portfolio, I share my projects and my progress in
-          this exciting field - welcome to my early web
-          development journey!</p
-        >
-        <div class="carde">
-          <div class="header">My Skills</div>
-          <div class="body">
-            <div class="skill">
-              <div class="skill-name">HTML</div>
-              <div class="skill-level">
-                <div class="skill-percent" id="html"></div>
-              </div>
-              <div
-                class="skill-percent-number"
-                id="html-porcentaje"
-                >90%</div
-              >
-            </div>
-            <div class="skill">
-              <div class="skill-name">CSS</div>
-              <div class="skill-level">
-                <div class="skill-percent" id="css"></div>
-              </div>
-              <div
-                class="skill-percent-number"
-                id="css-porcentaje"
-              ></div>
-            </div>
-            <div class="skill">
-              <div class="skill-name">JavaScript</div>
-              <div class="skill-level">
+    <main>
+      <section id="About">
+        <div class="pareja">
+          <img
+            src="./source/img/marrime.jpg"
+            alt="mi pareja y yo"
+            class="foto"
+          />
+        </div>
+        <div class="presentacion">
+          <h2>About Me</h2>
+          <p
+            >I am committed to continuous learning and
+            exploration of new technologies. Through my
+            portfolio, I share my projects and my progress
+            in this exciting field - welcome to my early web
+            development journey!</p
+          >
+          <div class="carde">
+            <div class="header">My Skills</div>
+            <div class="body">
+              <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="skill-level">
+                  <div
+                    class="skill-percent"
+                    id="html"
+                  ></div>
+                </div>
                 <div
-                  class="skill-percent"
-                  id="javaScript"
+                  class="skill-percent-number"
+                  id="html-porcentaje"
+                  >90%</div
+                >
+              </div>
+              <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-level">
+                  <div class="skill-percent" id="css"></div>
+                </div>
+                <div
+                  class="skill-percent-number"
+                  id="css-porcentaje"
                 ></div>
               </div>
-              <div
-                class="skill-percent-number"
-                id="javaScript-porcentaje"
-              ></div>
-            </div>
-            <div class="skill">
-              <div class="skill-name">React</div>
-              <div class="skill-level">
-                <div class="skill-percent" id="react"></div>
-              </div>
-              <div
-                class="skill-percent-number"
-                id="react-porcentaje"
-              ></div>
-            </div>
-            <div class="skill">
-              <div class="skill-name">Bootstrap</div>
-              <div class="skill-level">
+              <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-level">
+                  <div
+                    class="skill-percent"
+                    id="javaScript"
+                  ></div>
+                </div>
                 <div
-                  class="skill-percent"
-                  id="bootstrap"
+                  class="skill-percent-number"
+                  id="javaScript-porcentaje"
                 ></div>
               </div>
-              <div
-                class="skill-percent-number"
-                id="bootstrap-porcentaje"
-              ></div>
+              <div class="skill">
+                <div class="skill-name">React</div>
+                <div class="skill-level">
+                  <div
+                    class="skill-percent"
+                    id="react"
+                  ></div>
+                </div>
+                <div
+                  class="skill-percent-number"
+                  id="react-porcentaje"
+                ></div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Bootstrap</div>
+                <div class="skill-level">
+                  <div
+                    class="skill-percent"
+                    id="bootstrap"
+                  ></div>
+                </div>
+                <div
+                  class="skill-percent-number"
+                  id="bootstrap-porcentaje"
+                ></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section id="projects">
+        <h3>My projects</h3>
+        <p
+          >Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Sunt mollitia, itaque provident
+          architecto culpa quas nisi nobis ipsam officiis
+          corporis quibusdam perferendis tenetur! Reiciendis
+          minima eligendi officiis provident assumenda
+          optio.</p
+        >
+        <nav class="nav-projects">
+          <span>All</span>
+          <span>Movile</span>
+          <span>Web Frontend</span>
+          <span>Web Backend</span>
+          <span>Web FullStack</span>
+          <span>Escolar</span>
+        </nav>
+        <div class="container-projects">
+          <div class="card">
+            <img
+              src="./source/img/prueba.jpeg"
+              alt="prueba"
+            />
+            <h4>Titulo</h4>
+            <p
+              >Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit.!</p
+            >
+            <div class="container-btn">
+              <button>Code</button>
+              <button>View</button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./source/img/prueba.jpeg"
+              alt="prueba"
+            />
+            <h4>Titulo</h4>
+            <p
+              >Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit.!</p
+            >
+            <div class="container-btn">
+              <button>Code</button>
+              <button>View</button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./source/img/prueba.jpeg"
+              alt="prueba"
+            />
+            <h4>Titulo</h4>
+            <p
+              >Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit.!</p
+            >
+            <div class="container-btn">
+              <button>Code</button>
+              <button>View</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer id="footer">
+      <span>Hugo Hernandez </span>
+      <div class="nav-footer">
+        <a href="#header">Home</a>
+        <a href="#About">About Me</a>
+        <a href="#projects">Projects</a>
+      </div>
+      <div class="social">
+        <svg
+          id="tt"
+          width="34"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8 3C9.10457 3 10 3.89543 10 5V8H16C17.1046 8 18 8.89543 18 10C18 11.1046 17.1046 12 16 12H10V14C10 15.6569 11.3431 17 13 17H16C17.1046 17 18 17.8954 18 19C18 20.1046 17.1046 21 16 21H13C9.13401 21 6 17.866 6 14V5C6 3.89543 6.89543 3 8 3Z"
+            fill="currentColor"
+          />
+        </svg>
+        <svg
+          id="ins"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z"
+            fill="currentColor"
+          />
+          <path
+            d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+            fill="currentColor"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+            fill="currentColor"
+          />
+        </svg>
+        <svg
+          id="fac"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z"
+            fill="currentColor"
+          />
+        </svg>
+        <svg
+          id="lin"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.8284 12L16.2426 13.4142L19.071 10.5858C20.6331 9.02365 20.6331 6.49099 19.071 4.9289C17.509 3.3668 14.9763 3.3668 13.4142 4.9289L10.5858 7.75732L12 9.17154L14.8284 6.34311C15.6095 5.56206 16.8758 5.56206 17.6568 6.34311C18.4379 7.12416 18.4379 8.39049 17.6568 9.17154L14.8284 12Z"
+            fill="currentColor"
+          />
+          <path
+            d="M12 14.8285L13.4142 16.2427L10.5858 19.0711C9.02372 20.6332 6.49106 20.6332 4.92896 19.0711C3.36686 17.509 3.36686 14.9764 4.92896 13.4143L7.75739 10.5858L9.1716 12L6.34317 14.8285C5.56212 15.6095 5.56212 16.8758 6.34317 17.6569C7.12422 18.4379 8.39055 18.4379 9.1716 17.6569L12 14.8285Z"
+            fill="currentColor"
+          />
+          <path
+            d="M14.8285 10.5857C15.219 10.1952 15.219 9.56199 14.8285 9.17147C14.4379 8.78094 13.8048 8.78094 13.4142 9.17147L9.1716 13.4141C8.78107 13.8046 8.78107 14.4378 9.1716 14.8283C9.56212 15.2188 10.1953 15.2188 10.5858 14.8283L14.8285 10.5857Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+      <div class="derechos-reservados">
+        <p
+          >© 2023 <span>Hugo</span> All Rights Reserved ,
+          Inc.</p
+        >
+      </div>
+    </footer>
   </body>
   <script src="./js/burguer.js"></script>
   <script src="./js/experience.js"></script>

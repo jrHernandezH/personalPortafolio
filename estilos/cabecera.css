@@ -1,13 +1,13 @@
 #header{
     width: 90%;
-    height: max-content;
+    height: auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: start;
-    padding-top: 30px;
-    margin: 50px auto;
+    margin: auto;
+    padding-top: 70px;
     gap: 50px;
 }
 .perfil{
@@ -82,26 +82,58 @@
     width: 100%;
     z-index: -1;
 }
-.hireMe{
-    width: 100%;
-    height: 60px;
-    background-color: #FD6F00;
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2em;
+.button-name {
+    width: 50%;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px,rgba(45, 35, 66, 0.15) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.btn:hover {
-    background-color: #c42f0a;
-  }
+    display: inline-flex;
+    font-family: "Poppins";
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+   }
+   
+   .button-name:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+   }
+   
+   .button-name:hover {
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+   }
+   
+   .button-name:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+   }
+
 /*Celular*/
 @media (max-width: 767px) {
     #header{
+        padding: 10px;
         flex-direction: column;
-        margin: 10px auto;
+        margin: 22px auto;
     }
     .perfil{
         width: 100%;
@@ -130,7 +162,7 @@
         height: 130px;
     }
     .profesion p{
-        display: inline-block;
+        display: block;
         margin: 0;
         font-size: 46px;
         font-family: 'Poppins';
@@ -168,13 +200,11 @@
         width: 100%;
         z-index: -1;
     }
-    .hireMe{
-        width: 100%;
-    }
 }
 /*Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
     #header{
+        margin-top: 22px;
         width: 90%;
         height: max-content;
         align-items: flex-start;
@@ -243,8 +273,5 @@
     .profesion p:hover .barrido {
         width: 100%;
         z-index: -1;
-    }
-    .hireMe{
-        width: 100%;
     }
 }
